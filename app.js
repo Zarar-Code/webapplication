@@ -171,6 +171,7 @@ app.use((err, req, res, next) => {
 })
 
 //----------Listern Port
-app.listen(2000, () => {
-    console.log('Serve On Port!! 2000')
+const port = process.env.PORT || 2000
+app.listen(port, () => {
+    console.log(`Serve On Port!! ${port}`)
 })
