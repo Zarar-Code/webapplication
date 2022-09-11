@@ -2,7 +2,7 @@
     <link rel="stylesheet" href="/styleSheet/stars.css">
     <div class="row">
 
-        <div class="col-6  ">
+        <div class="col-md-6  ">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <% campground.images.forEach((img , i)=>{ %>
@@ -58,13 +58,9 @@
             </div>
         </div>
         <div class="col-1"></div>
-        <div class="col-5">
+        <div class="col-md-5">
             <h2>Leave Reviews</h2>
             <form action="/campgrounds/<%=campground._id%>/reviews" method="POST" novalidate class="mb-3 validate-form">
-                <!-- <div class="mb-3">
-                    <label class="form-label" for="rating">Rating</label>
-                    <input class="form-range" min="1" max="5" type="range" name="review[rating]" id="rating">
-                </div> -->
                 <fieldset class="starability-basic">
                     <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="0" checked
                         aria-label="No rating." />
